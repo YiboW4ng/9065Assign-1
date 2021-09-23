@@ -1,0 +1,27 @@
+
+		*{
+			font-family: sans-serif;
+			color: maroon;
+			background-color: white;
+		}
+		
+		li {
+			border: 1px dashed black;
+		}
+		
+		span{
+			background-color: #DCDCDC;
+		}
+		
+		@font-face {
+			font-family:Poller One;
+			src: url(https://fonts.gstatic.com/s/pollerone/v12/ahccv82n0TN3gia5E4BuR-5RgA.woff2);
+		}
+		
+		h1,h2,h3 {
+			font-family: Poller One;
+		}
+		
+		.myweb{
+			font: 1.75em monospace;
+		}
