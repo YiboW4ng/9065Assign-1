@@ -1,0 +1,204 @@
+commands used to create local repository:
+
+git branch -b [name]
+
+other commands used in this assignment:
+
+git config --global user.name " "
+git config --global user.email " "
+ssh-keygen -t rsa -C GitHub email
+git init
+git add [. or filename]
+git commit -m 'message'
+git remote add origin 'url'
+git pull --rebase origin master
+git push origin master
+git checkout  -b [branch name]
+git merge [branch name]
+git log --all
+...
+
+
+Merge the separateCSS branch.  Why was that easy?
+
+Since the submission pointed to by the merge branch separateCSS is the direct successor of the submission pointed by the branch master, so GIT will directly move the pointer forward,which also called fast forward.
+
+Merge separateJS. What makes this more difficult?
+
+Because the development history has diverged from an earlier stage. After merging branch separateCSS ,the submission of the master branch is not the direct ancestor of the submission of the separateJS branch, GIT has to do some extra work.
+
+git log --all
+
+$ git log --all
+commit 5c123f7e50f643714270abf9bc2f534c584bf8c4 (HEAD -> master)
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Thu Sep 23 00:29:58 2021 -0400
+
+    my merged version
+
+commit f23d5bfef85f86002dc2cfcde47ede2cbb0aa928
+Merge: 2ea6448 931c1da
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Thu Sep 23 00:26:57 2021 -0400
+
+    Merge branch 'separateJS' into master
+
+    upload necessary JS file ver2
+
+commit 931c1dac733c0910c4c0a088106591c6c777b641 (separateJS)
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Thu Sep 23 00:26:41 2021 -0400
+
+    upload JS ver2
+
+commit 2ea6448e5fdbb2739c181adfc7e38b1a31cd0d3c
+Merge: 3bffbc6 b2b75c1
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Thu Sep 23 00:23:22 2021 -0400
+
+    Merge branch 'separateJS' into master
+
+    upload necessary JS file
+
+commit 3bffbc6dbd41a43e0cb358ec1b18be063494ee19 (separateCSS)
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Thu Sep 23 00:20:56 2021 -0400
+
+    upload CSS ver2
+
+commit b2b75c1d258bbad4bb4109986eec0a0919403ebb
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 23:59:41 2021 -0400
+
+    upload js
+
+commit 103fd4d65cefa725b13bf1017caa54c4be3fe50d
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 23:52:28 2021 -0400
+
+    upload CSS
+
+commit 9565258424a52554413732c164804f5eaa3b927b (origin/separateJS)
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 22:14:32 2021 -0400
+
+    separateJS
+
+commit 448f0ef5a11750f477015d620c941df692b4b997 (origin/separateCSS)
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 22:02:32 2021 -0400
+
+    separateCSS
+
+commit 0539c07b123f606167b0e6421162005c6a246e49
+Author: YiboW4ng <91038672+YiboW4ng@users.noreply.github.com>
+Date:   Wed Sep 22 21:02:23 2021 -0400
+
+    Delete Test4.doc
+
+commit 45c52d0c15c61bce4160e046d8c0444d31ddb27d
+Author: YiboW4ng <91038672+YiboW4ng@users.noreply.github.com>
+Date:   Wed Sep 22 21:02:18 2021 -0400
+
+    Delete Test3.doc
+
+commit 1e839fec0c8ff0d0dc6aa912269aa75781624823 (origin/Test2)
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 20:34:06 2021 -0400
+
+    upload Test4.doc
+
+commit ff6ff4c94afbf47fdb9a4d5b8f05a8b8e3b57a90 (origin/master)
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 20:29:42 2021 -0400
+
+    upload Test4.doc
+
+commit d349943e980d5446f67855c3e7106b22b0b56864
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 20:26:24 2021 -0400
+
+    upload Test3.doc
+
+commit 1ac9af349bb7e1934d7c9868d8cb415e6c3cee91
+Author: YiboW4ng <91038672+YiboW4ng@users.noreply.github.com>
+Date:   Wed Sep 22 20:17:24 2021 -0400
+
+    Delete Test2.doc
+
+commit 580cf3dd936caf25d13b5dcce15f02b39386cbc4
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 20:16:52 2021 -0400
+
+    upload Test2.doc
+
+commit 08ce9c841d0c4b2f719c4fe86d3988322043f01b
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Wed Sep 22 11:50:22 2021 -0400
+
+    Yibo.html does it all
+
+commit 376ace80f2b11ae4657df12c3b85037687c09482
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Tue Sep 21 15:46:50 2021 -0400
+
+    used internal CSS to style Yibo.html
+
+commit 7bbd09974138b163533efcb5c767dcf52b4ace20
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Tue Sep 21 01:07:50 2021 -0400
+
+    added stuff about hobbies
+
+commit 91053a28d91fe2f46dbe1e150d1d2ed4f287f8fb
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Tue Sep 21 00:02:45 2021 -0400
+
+    hello Yibo
+
+commit a4a45b46d22c6957afdabba82b19a709f18c1c97
+Author: YiboW4ng <91038672+YiboW4ng@users.noreply.github.com>
+Date:   Mon Sep 20 23:08:36 2021 -0400
+
+    Create README.md
+
+commit 70ee573aff14887990f350979dba3a0e614753a6
+Author: YiboW4ng <91038672+YiboW4ng@users.noreply.github.com>
+Date:   Mon Sep 20 23:08:17 2021 -0400
+
+    Delete Test5.pptx
+
+commit 6fdac16970aa6be2c3d1bc2e2350ca97ebee7418
+Author: YiboW4ng <91038672+YiboW4ng@users.noreply.github.com>
+Date:   Mon Sep 20 23:08:12 2021 -0400
+
+    Delete Test3.txt
+
+commit 81cb3734855631cabe3ddaa89d536952ccff2559
+Author: YiboW4ng <91038672+YiboW4ng@users.noreply.github.com>
+Date:   Mon Sep 20 23:08:08 2021 -0400
+
+    Delete Test2.docx
+
+commit 21d2408d0d4c87b77d3c433b92cf82921419d50d
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Mon Sep 20 22:21:34 2021 -0400
+
+    Test5
+
+commit 69dc4361e2489952fadda1f6f767ea0a8022ada0
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Sun Sep 19 22:54:32 2021 -0400
+
+    Test3
+
+commit 5487abe8a663e9d034d94a3374352d0e69f9d82e
+Author: YiboW4ng <ywan4369@uwo.ca>
+Date:   Sun Sep 19 22:43:45 2021 -0400
+
+    Test2
+(END)
+
+
+
+
