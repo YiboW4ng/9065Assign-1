@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Assignment#1</title>
-		<link rel="stylesheet" href="V_First.css" type="text/css"/>
-		
-		<!-- <script type="text/javascript">
+
 			function addLi(){
 				var elem_li = document.createElement('li'); //create a li element
 				elem_li.innerHTML='lorem ipsum';
@@ -37,27 +30,3 @@
 					   spanEle[i].innerHTML=fResult2[i];
 				 }
 			};
-		</script> -->
-		<script src="./Yibo.js"></script>
-	</head>
-	<body>
-		<h2>
-			Yibo Wang<a href="https://www.cmu.edu/hub/registrar/docs/phonetic-spelling-instructions.pdf">(wang yi bo)</a>   
-		</h2>
-		<button onclick=addLi()>more</button>
-		<ul id="ul1">
-			<li class="myweb">Basketball</li>
-			<li class="myweb">Video Games</li>
-			<li>Music</li>
-			<li>Food</li>
-		</ul>
-		<p id="p1">
-			<span class="myweb">I like to play basketball, and my favourite player is Lebron James,</span>
-			<span class="myweb">I play lol when I'm free, I have been playing for 5 years,</span>
-			<span>My favourite song recently is Wake me up from Avicii,</span>
-			<span>My favorite food is Beijing roast duck,</span>
-			<span>I also like to chat with people.</span>
-		</p>
-		
-	</body>
-</html>
